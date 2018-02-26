@@ -6,7 +6,7 @@ from dbhelper import DBHelper
 
 db = DBHelper()
 
-TOKEN = "442017555:AAECxTQYrjtAwKn6hMvYIHbZif_XIFupkzA"
+TOKEN = " "
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
@@ -61,7 +61,7 @@ def handle_updates(updates):
             keyboard = build_keyboard(items)
             send_message("Select an item to delete", chat, keyboard)
         elif text == "/start":
-            send_message("Welcome to your personal To Do list. Send any text to me and I'll store it as an item. Send /done to remove items", chat)
+            send_message("¡Hola, Soy PPone! Pero los humanos prefieren llamarme Pepe Juan.", chat)
         elif text.startswith("/"):
             continue
         elif text in items:
